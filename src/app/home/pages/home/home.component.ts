@@ -27,8 +27,10 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.userInput$ = this.store.select(HomeSelectors.selectUserInput);
     // TODO Remove default values
-    this.sheetID = '1k0ETCI_rPqrPHrnlcdgWfU4NU7Pfx4fUuVkhZhZxwfc';
-    this.sheetName = 'family';
+    // this.sheetID = '1k0ETCI_rPqrPHrnlcdgWfU4NU7Pfx4fUuVkhZhZxwfc';
+    // this.sheetName = 'family';
+    this.sheetID = '';
+    this.sheetName = '';
   }
 
   storeUserInput(userInput: string) {
