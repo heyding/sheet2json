@@ -1,8 +1,3 @@
-# Angular + Tailwind Template
-
-You can fork this template if you need a basic setup for an Angular project and want to use Tailwind CSS for the UI.
-Tailwind was integrated according to this [guide](https://jacobneterer.medium.com/angular-and-tailwindcss-2388fb6e0bab).
-
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
 
 ## Development server
@@ -13,17 +8,9 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Tailwind components
-
-You will find some designed components at [tailwindui.com](https://tailwindui.com/). Just copy the HTML code into your components .html file.
-
 ## i18n
 
 This project uses ngx-translate to enable the translation into different language. It was set up by following this [guide](https://www.codeandweb.com/babeledit/tutorials/how-to-translate-your-angular-app-with-ngx-translate). You can add new language files in "src/assets/i18n".
-
-## NgRX
-
-This project uses NgRx functionality to keep a good overview of the state. It was set up by following this [guide](https://ngrx.io/guide/store/install) and can be used accordingly.
 
 ## Further help
 
