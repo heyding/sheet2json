@@ -15,6 +15,7 @@ import {homeFeatureKey} from './pages/home/store/home.store';
 import {homeReducer} from './pages/home/store/home.reducer';
 import { PrerequisiteListComponent } from './components/prerequisite-list/prerequisite-list.component';
 import { PrerequisiteComponent } from './components/prerequisite/prerequisite.component';
+import { ApiReferenceComponent } from './components/api-reference/api-reference.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { PrerequisiteComponent } from './components/prerequisite/prerequisite.co
     PageNotFoundComponent,
     FeatureOverviewComponent,
     PrerequisiteListComponent,
-    PrerequisiteComponent
+    PrerequisiteComponent,
+    ApiReferenceComponent
   ],
   exports: [
     HomeComponent
