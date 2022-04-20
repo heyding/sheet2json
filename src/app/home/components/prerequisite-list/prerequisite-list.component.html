@@ -1,0 +1,21 @@
+<div class="max-w-3xl mx-auto sm:px-6 lg:px-8 pb-6 flex justify-center">
+  <button type="button" (click)="onButtonClick()"
+          class="inline-flex items-center px-3 py-2 border-gray-300 shadow-sm text-lg leading-4 font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+    {{buttonText}}
+  </button>
+</div>
+<div *ngIf="displayGif" class="max-w-3xl mx-auto sm:px-6 lg:px-8 pb-6">
+  <img src="assets/media/sheet2json.gif"/>
+</div>
+<div class="max-w-4xl mx-auto sm:px-6 lg:px-8 space-y-4 px-8 flex justify-center">
+  <div class="flow-root">
+    <ul role="list" class="-mb-8">
+      <app-prerequisite [description]="'Structure your data'" [icon]="'thumb'" [last]="false"></app-prerequisite>
+      <app-prerequisite [description]="'Freeze header row'" [icon]="'thumb'" [last]="false"></app-prerequisite>
+      <app-prerequisite [description]="'Share your sheet'" [icon]="'thumb'" [last]="false"></app-prerequisite>
+      <app-prerequisite [description]="'Paste sheet URL & name'"
+                        [icon]="'thumb'" [last]="false"></app-prerequisite>
+      <app-prerequisite [description]="'Generate JSON'" [icon]="'check'" [last]="true"></app-prerequisite>
+    </ul>
+  </div>
+</div>

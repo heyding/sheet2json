@@ -13,6 +13,8 @@ import {HomeEffects} from './pages/home/store/home.effects';
 import {FormsModule} from '@angular/forms';
 import {homeFeatureKey} from './pages/home/store/home.store';
 import {homeReducer} from './pages/home/store/home.reducer';
+import { PrerequisiteListComponent } from './components/prerequisite-list/prerequisite-list.component';
+import { PrerequisiteComponent } from './components/prerequisite/prerequisite.component';
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import {homeReducer} from './pages/home/store/home.reducer';
     LanguageSwitchComponent,
     AboutComponent,
     PageNotFoundComponent,
-    FeatureOverviewComponent
+    FeatureOverviewComponent,
+    PrerequisiteListComponent,
+    PrerequisiteComponent
   ],
   exports: [
     HomeComponent

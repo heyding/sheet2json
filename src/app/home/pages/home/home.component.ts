@@ -26,9 +26,6 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.userInput$ = this.store.select(HomeSelectors.selectUserInput);
-    // TODO Remove default values
-    // this.sheetID = '1k0ETCI_rPqrPHrnlcdgWfU4NU7Pfx4fUuVkhZhZxwfc';
-    // this.sheetName = 'family';
     this.sheetID = '';
     this.sheetName = '';
   }
@@ -49,12 +46,24 @@ export class HomeComponent implements OnInit {
     this.displayUserInput = false;
   }
 
-  previewJSON(sheetID: string, sheetName: string) {
+  previewJSON(url: string, sheetName: string) {
+    const sheetID = this.getSheetID(url);
     this.jsonDownloadService.previewJSON(sheetID, sheetName);
   }
 
-  downloadJSON(sheetID: string, sheetName: string) {
+  downloadJSON(url: string, sheetName: string) {
+    const sheetID = this.getSheetID(url);
     this.jsonDownloadService.downloadJSON(sheetID, sheetName);
+  }
+
+  getSheetID(url: string): string {
+    const prefix = 'https://docs.google.com/spreadsheets/d/';
+    const suffix = '/edit'
+
+    // Extract the sheetID which is a string inside the URL
+    url = url.replace(prefix, '');
+    const sheetID = url.split(suffix)[0];
+    return sheetID;
   }
 
 
