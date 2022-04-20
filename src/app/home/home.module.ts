@@ -1,4 +1,5 @@
 import {NgModule} from '@angular/core';
+import {CoreModule} from '../core/core.module';
 import {CommonModule} from '@angular/common';
 import {HomeComponent} from './pages/home/home.component';
 import {TranslateModule} from '@ngx-translate/core';
@@ -33,6 +34,7 @@ import { JsonFetchComponent } from './components/json-fetch/json-fetch.component
     HomeComponent
   ],
   imports: [
+    CoreModule,
     CommonModule,
     TranslateModule,
     RouterModule,

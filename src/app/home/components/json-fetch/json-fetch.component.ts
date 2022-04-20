@@ -13,6 +13,8 @@ export class JsonFetchComponent implements OnInit {
   loading: boolean = false;
   errorMessage: string | undefined;
 
+  fetchError: boolean = false;
+
   constructor(private jsonDownloadService: JsonService) {
   }
 
@@ -39,6 +41,7 @@ export class JsonFetchComponent implements OnInit {
         (error) => {
           this.errorMessage = error;
           this.loading = false;
+          this.fetchError = true;
           throw error;
         }
       )

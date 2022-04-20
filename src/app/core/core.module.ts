@@ -4,17 +4,20 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import {TranslateModule} from '@ngx-translate/core';
 import {RouterModule} from '@angular/router';
+import { NotificationComponent } from './notification/notification.component';
 
 
 
 @NgModule({
   declarations: [
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    NotificationComponent
   ],
   exports: [
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    NotificationComponent
   ],
     imports: [
         CommonModule,
