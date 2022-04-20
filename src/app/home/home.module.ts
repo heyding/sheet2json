@@ -6,16 +6,15 @@ import {LanguageSwitchComponent} from './components/language-switch/language-swi
 import {AboutComponent} from './pages/about/about.component';
 import {PageNotFoundComponent} from './components/page-not-found/page-not-found.component';
 import {RouterModule} from '@angular/router';
-import {FeatureOverviewComponent} from './components/feature-overview/feature-overview.component';
 import {StoreModule} from '@ngrx/store';
 import {EffectsModule} from '@ngrx/effects';
 import {HomeEffects} from './pages/home/store/home.effects';
 import {FormsModule} from '@angular/forms';
 import {homeFeatureKey} from './pages/home/store/home.store';
 import {homeReducer} from './pages/home/store/home.reducer';
-import { PrerequisiteListComponent } from './components/prerequisite-list/prerequisite-list.component';
-import { PrerequisiteComponent } from './components/prerequisite/prerequisite.component';
-import { ApiReferenceComponent } from './components/api-reference/api-reference.component';
+import {PrerequisiteListComponent} from './components/prerequisite-list/prerequisite-list.component';
+import {PrerequisiteComponent} from './components/prerequisite/prerequisite.component';
+import {ApiReferenceComponent} from './components/api-reference/api-reference.component';
 
 
 @NgModule({
@@ -24,7 +23,6 @@ import { ApiReferenceComponent } from './components/api-reference/api-reference.
     LanguageSwitchComponent,
     AboutComponent,
     PageNotFoundComponent,
-    FeatureOverviewComponent,
     PrerequisiteListComponent,
     PrerequisiteComponent,
     ApiReferenceComponent
