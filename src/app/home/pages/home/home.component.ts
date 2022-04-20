@@ -5,7 +5,6 @@ import {HomeSelectors} from './store/home.selectors';
 import {HomeActions} from './store/home.actions';
 import {JsonService} from '../../../shared/services/json.service';
 
-// import FileSaver from 'file-saver';
 
 @Component({
   selector: 'app-home',
@@ -21,13 +20,13 @@ export class HomeComponent implements OnInit {
   sheetID: string | undefined;
   sheetName: string | undefined;
 
-  apiBaseUrl = 'https://opensheet.elk.sh/';
 
   constructor(private store: Store, private jsonDownloadService: JsonService) {
   }
 
   ngOnInit(): void {
     this.userInput$ = this.store.select(HomeSelectors.selectUserInput);
+    // TODO Remove default values
     this.sheetID = '1k0ETCI_rPqrPHrnlcdgWfU4NU7Pfx4fUuVkhZhZxwfc';
     this.sheetName = 'family';
   }
@@ -47,12 +46,6 @@ export class HomeComponent implements OnInit {
   hideUserInput(): void {
     this.displayUserInput = false;
   }
-
-  /*  private fetchSheetDataAsJSON(sheetID: string, sheetName: string): void {
-      this.http.get(this.apiBaseUrl.concat('/').concat(sheetID).concat('/').concat(sheetName)).subscribe(response => {
-        console.log(response);
-        // this.downloadFile(response);
-      })};*/
 
   previewJSON(sheetID: string, sheetName: string) {
     this.jsonDownloadService.previewJSON(sheetID, sheetName);
