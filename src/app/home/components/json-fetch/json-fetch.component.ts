@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {JsonService} from '../../../shared/services/json.service';
+import {NotificationService} from '../../../shared/services/notification.service';
 
 @Component({
   selector: 'app-json-fetch',
@@ -13,9 +14,13 @@ export class JsonFetchComponent implements OnInit {
   loading: boolean = false;
   errorMessage: string | undefined;
 
-  fetchError: boolean = false;
+  options = {
+    autoClose: false,
+    keepAfterRouteChange: false
+  };
 
-  constructor(private jsonDownloadService: JsonService) {
+
+  constructor(private jsonDownloadService: JsonService, private notificationService: NotificationService) {
   }
 
   ngOnInit(): void {
@@ -41,7 +46,8 @@ export class JsonFetchComponent implements OnInit {
         (error) => {
           this.errorMessage = error;
           this.loading = false;
-          this.fetchError = true;
+          // TODO Mit richtigen Nachrichten befüllen
+          this.notificationService.error('test', 'test', this.options);
           throw error;
         }
       )
