@@ -1,73 +1,57 @@
 {
   "header": {
-    "menu": {
-      "solutions": "Lösungen",
-      "pricing": "Preise",
-      "docs": "Dokumentation",
-      "company": "Über uns"
-    },
-    "button": {
-      "sign-in": "Anmelden",
-      "sign-up": "Registrieren"
-    }
+    "title": "SHEET2JSON",
+    "text": "Füge die URL und den Name deines Google Sheets ein, um daraus JSON zu erzeugen."
   },
   "footer": {
-    "text": {
-      "long-notice": "Große Neuigkeiten! Wir haben ein neues Produkt!",
-      "short-notice": "Wir haben ein neues Produkt!"
+    "page": {
+      "home": "Home",
+      "about": "Über"
     },
-    "button": {
-      "learn-more": "Mehr erfahren"
-    }
+    "url": "heyding.de"
   },
   "home": {
-    "headline": "Angular + Tailwind Template",
-    "text": "Wenn die Seite wie der Screenshot in \"src/assets/img\" aussieht, ist Tailwind korrekt eingerichtet und du kannst beginnen.",
-    "ngrx": {
-      "title": "NGRX Test",
-      "description": "Wir haben NGRX Funktionalität schon implementiert. Schreibe etwas in die Textarea, drück den Button und aktualisiere den Browser Tab um das zu verifizieren.",
-      "button": {
-        "store": "Input speichern",
-        "reset": "Store zurücksetzen"
+    "prerequisite": {
+      "one" : "1 - Strukturiere deine Daten",
+      "two" : "2 - Teile dein Sheet ('anyone can view')",
+      "three" : "3 - Kopiere URL und Names des Sheets"
+    },
+    "json-fetch": {
+      "url": "Sheet URL",
+      "name": "Sheet Name",
+      "button" : {
+        "preview": "Vorschau JSON",
+        "download": "Download JSON"
       },
-      "store": "Gespeicherter Wert: ",
-      "message": "Deine Eingabe war: "
-    }
-  },
-  "features": {
-    "title": "Funktionen",
-    "text": "Hier findest du eine Liste mit Funktionen, die du sofort nutzen kannst.",
-    "feature-list": {
-      "tailwind": {
-        "title": "Tailwind CSS 3.0",
-        "description": "Dieses Template implementiert Tailwind CSS 3.0. Du kannst diese Vorlagen sofort in deinen Komponenten verwenden."
-      },
-      "routing": {
-        "title": "Routing",
-        "description": "Wir haben Routing innerhalb der App eingerichtet und sogar eine 404-Fehlerseite hinzugefügt, falls die eingegebene URL falsch ist."
-      },
-      "i18n": {
-        "title": "i18n",
-        "description": "Dieses Template nutzt ngx-translate. Du kannst verschiedene Sprachen nutzen, indem du die .json Files erweiterst."
-      },
-      "directory": {
-        "title": "Orderstruktur",
-        "description": "Wir haben eine skalierbare Ordnerstruktur angelegt, die einer modernen Angular-Architektur entspricht."
-      },
-      "ngrx": {
-        "title": "NgRX",
-        "description": "NgRx ist vorkonfiguriert. Du brauchst nichts zu installieren und kannst direkt Actions, Reducer und Effects für deine Feautes anlegen."
+      "notification": {
+        "success" : {
+          "title": "YES",
+          "message": "It worked"
+        },
+        "error": {
+          "title": "Oooops",
+          "message": "Something went wrong"
+        }
       }
     }
   },
+  "api-reference": {
+    "text": {
+      "large": "Diese App profitiert von der Api von Ben Borgers. Schau dir seinen Blog-Post und seine Api-Beschreibung an!",
+      "small": "Diese App profitiert von der Api von Ben Borgers. Danke!"
+    },
+    "button": {
+      "visit": "Öffne benborgers.com"
+    }
+  },
   "about": {
-    "title": "Über uns",
-    "headline": "Unser Team"
+    "title": "Über",
+    "headline": "TEAM"
   },
   "404": {
-    "title": "Fehler 404",
-    "headline": "Seite nicht gefunden",
-    "text": "Es tut uns leid. Diese Seite existiert nicht.",
+    "title": "404 Fehler",
+    "headline": "Seite nicht gefunden.",
+    "text": "Sorry, wir konnten die gewünsche Seite nicht finden.",
     "button": {
       "back-to-start": "Zurück zur Startseite"
     }

@@ -1,11 +1,11 @@
 import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-prerequisite-list',
-  templateUrl: './prerequisite-list.component.html',
-  styleUrls: ['./prerequisite-list.component.css']
+  selector: 'app-prerequisites',
+  templateUrl: './prerequisites.component.html',
+  styleUrls: ['./prerequisites.component.css']
 })
-export class PrerequisiteListComponent implements OnInit {
+export class PrerequisitesComponent implements OnInit {
 
   displayGif: boolean | undefined;
   buttonText = 'Show tutorial';

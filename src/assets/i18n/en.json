@@ -1,68 +1,52 @@
 {
   "header": {
-    "menu": {
-      "solutions": "Solutions",
-      "pricing": "Pricing",
-      "docs": "Docs",
-      "company": "Company"
-    },
-    "button": {
-      "sign-in": "Sign In",
-      "sign-up": "Sign Up"
-    }
+    "title": "SHEET2JSON",
+    "text": "Paste the URL and name of your Google sheet to generate JSON."
   },
   "footer": {
-    "text": {
-      "long-notice": "Big news! We're excited to announce a brand new product.",
-      "short-notice": "We announced a new product!"
+    "page": {
+      "home": "Home",
+      "about": "About"
     },
-    "button": {
-      "learn-more": "Learn more"
-    }
+    "url": "heyding.de"
   },
   "home": {
-    "headline": "Angular + Tailwind Template",
-    "text": "If the website looks like the screenshot in \"src/assets/img\", Tailwind is set up and you can start coding.",
-    "ngrx": {
-      "title": "NGRX Test",
-      "description": "We already implemented NGRX functionality. Type something, hit the button and refresh the browser tab to verify.",
-      "button": {
-        "store": "Store input",
-        "reset": "Reset store"
+    "prerequisite": {
+      "one" : "1 - Structure your data",
+      "two" : "2 - Share your sheet (anyone can view)",
+      "three" : "3 - Paste sheet URL & name"
+    },
+    "json-fetch": {
+      "url": "Sheet URL",
+      "name": "Sheet name",
+      "button" : {
+        "preview": "Preview JSON",
+        "download": "Download JSON"
       },
-      "store": "Stored value is: ",
-      "message": "Your input was: "
+      "notification": {
+        "success" : {
+          "title": "YES",
+          "message": "It worked"
+        },
+        "error": {
+          "title": "Oooops",
+          "message": "Something went wrong"
+        }
+      }
     }
   },
-  "features": {
-    "title": "Features",
-    "text": "Here is a list with implemented features that you can use right away.",
-    "feature-list": {
-      "tailwind": {
-        "title": "Tailwind CSS 3.0",
-        "description": "This template fully implements Tailwind CSS 3.0. You can use there templates right away within you components."
-      },
-      "routing": {
-        "title": "Routing",
-        "description": "We added routing within the application and even a 404 error page, if the URL is incorrect."
-      },
-      "i18n": {
-        "title": "i18n",
-        "description": "This template uses ngx-translate. You can add multiple translation files to set up the app in different languages."
-      },
-      "directory": {
-        "title": "Folder structure",
-        "description": "We set up a scalable folder structure, which you can use."
-      },
-      "ngrx": {
-        "title": "NgRX",
-        "description": "NgRx is preconfigured. You do not need to install anything and are able to create actions, reducers and effects for your features."
-      }
+  "api-reference": {
+    "text": {
+      "large": "This app benefits from the api of Ben Borgers. Check out his blog post and api description!",
+      "small": "This app benefits from the api of Ben Borgers. Cheers!"
+    },
+    "button": {
+      "visit": "Visit benborgers.com"
     }
   },
   "about": {
     "title": "About",
-    "headline": "Meet our team"
+    "headline": "TEAM"
   },
   "404": {
     "title": "404 error",

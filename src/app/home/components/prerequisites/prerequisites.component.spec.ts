@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PrerequisiteListComponent } from './prerequisite-list.component';
+import { PrerequisitesComponent } from './prerequisites.component';
 
 describe('PrerequisitesComponent', () => {
-  let component: PrerequisiteListComponent;
-  let fixture: ComponentFixture<PrerequisiteListComponent>;
+  let component: PrerequisitesComponent;
+  let fixture: ComponentFixture<PrerequisitesComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PrerequisiteListComponent ]
+      declarations: [ PrerequisitesComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PrerequisiteListComponent);
+    fixture = TestBed.createComponent(PrerequisitesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
