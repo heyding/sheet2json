@@ -3,6 +3,7 @@ export class Notification {
   type: NotificationType | undefined;
   headline: string | undefined;
   message: string | undefined;
+  icon: string | undefined;
   autoClose: boolean | undefined;
   keepAfterRouteChange: boolean | undefined;
   fade: boolean | undefined;

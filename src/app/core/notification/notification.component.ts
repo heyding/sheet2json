@@ -18,6 +18,10 @@ export class NotificationComponent implements OnInit {
   notificationsSubscription: Subscription | undefined;
   routeSubscription: Subscription | undefined;
 
+  headline: string | undefined;
+  message: string | undefined;
+
+
   constructor(private router: Router, private notificationService: NotificationService) {
   }
 
@@ -25,6 +29,8 @@ export class NotificationComponent implements OnInit {
     // subscribe to new notification notifications
     this.notificationsSubscription = this.notificationService.onNotification(this.id)
       .subscribe(notification => {
+        this.headline = notification.headline;
+        this.message = notification.message;
         // clear notifications when an empty notification is received
         if (!notification.message) {
           // filter out notifications without 'keepAfterRouteChange' flag
