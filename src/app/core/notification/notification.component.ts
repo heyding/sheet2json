@@ -46,7 +46,7 @@ export class NotificationComponent implements OnInit {
 
         // auto close notification if required
         if (notification.autoClose) {
-          setTimeout(() => this.removeNotification(notification), 3000);
+          setTimeout(() => this.removeNotification(notification), 7000);
         }
       });
 

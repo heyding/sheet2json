@@ -18,7 +18,7 @@ export class JsonFetchComponent implements OnInit {
   notifyErrorMessage: string = 'Please check the pasted URL and name of your sheet. And make sure that you set the visibility to public within Google Sheets.';
 
   options = {
-    autoClose: false,
+    autoClose: true,
     keepAfterRouteChange: false
   };
 
