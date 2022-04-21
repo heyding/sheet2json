@@ -5,7 +5,6 @@ import {HomeComponent} from './pages/home/home.component';
 import {TranslateModule} from '@ngx-translate/core';
 import {LanguageSwitchComponent} from './components/language-switch/language-switch.component';
 import {AboutComponent} from './pages/about/about.component';
-import {PageNotFoundComponent} from './components/page-not-found/page-not-found.component';
 import {RouterModule} from '@angular/router';
 import {StoreModule} from '@ngrx/store';
 import {EffectsModule} from '@ngrx/effects';
@@ -23,7 +22,6 @@ import {JsonFetchComponent} from './components/json-fetch/json-fetch.component';
     HomeComponent,
     LanguageSwitchComponent,
     AboutComponent,
-    PageNotFoundComponent,
     PrerequisitesComponent,
     ApiReferenceComponent,
     JsonFetchComponent

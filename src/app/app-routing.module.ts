@@ -2,7 +2,7 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {HomeComponent} from './home/pages/home/home.component';
 import {AboutComponent} from './home/pages/about/about.component';
-import {PageNotFoundComponent} from './home/components/page-not-found/page-not-found.component';
+import {PageNotFoundComponent} from './core/page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
