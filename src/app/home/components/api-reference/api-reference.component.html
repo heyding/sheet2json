@@ -1,20 +1,36 @@
-<!-- This example requires Tailwind CSS v2.0+ -->
-<div class="relative bg-gray-800">
-  <div class="relative max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
-    <div class="md:ml-auto  md:pl-10">
-      <h2 class="text-base font-semibold uppercase tracking-wider text-gray-300">Why this works</h2>
-      <p class="mt-2 text-white text-3xl font-extrabold tracking-tight sm:text-4xl">This is just the UI</p>
-      <p class="mt-3 text-lg text-gray-300">This app just makes it a little easier to generate your JSON data. 99% of the credit should go to Ben Borgers. He developed the api that this app is using. Check out his blog post!</p>
-      <div class="mt-8">
-        <div class="inline-flex rounded-md shadow">
-          <a href="https://benborgers.com/posts/google-sheets-json" target="_blank" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 bg-white hover:bg-gray-50">
-            Check out Ben Borgers and opensheet
-            <!-- Heroicon name: solid/external-link -->
-            <svg class="-mr-1 ml-3 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-              <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
-              <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+<div *ngIf="displayBanner" class="fixed bottom-0 inset-x-0 pb-2 sm:pb-5">
+  <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+    <div class="p-2 rounded-lg bg-gray-600 shadow-lg sm:p-3">
+      <div class="flex items-center justify-between flex-wrap">
+        <div class="w-0 flex-1 flex items-center">
+          <span class="flex p-2 rounded-lg bg-gray-800">
+            <!-- Heroicon name: outline/speakerphone -->
+            <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                 stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"/>
             </svg>
-          </a>
+          </span>
+          <p class="ml-3 font-medium text-white truncate">
+            <span class="md:hidden"> This app benefits from the api of Ben Borgers. Cheers!</span>
+            <span class="hidden md:inline"> This app benefits from the api of Ben Borgers. Check out his blog post and his api description! </span>
+          </p>
+        </div>
+        <div class="order-3 mt-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto">
+          <a href="https://benborgers.com/posts/google-sheets-json" target="_blank"
+             class="flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-gray-600 bg-white hover:bg-gray-50">
+            Visit benborgers.com </a>
+        </div>
+        <div class="order-2 flex-shrink-0 sm:order-3 sm:ml-2">
+          <button (click)="dismissBanner()" type="button"
+                  class="-mr-1 flex p-2 rounded-md hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-white">
+            <span class="sr-only">Dismiss</span>
+            <!-- Heroicon name: outline/x -->
+            <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                 stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
         </div>
       </div>
     </div>

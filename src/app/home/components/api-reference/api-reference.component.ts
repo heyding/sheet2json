@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-api-reference',
@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ApiReferenceComponent implements OnInit {
 
-  constructor() { }
+  displayBanner: boolean = true;
+
+  constructor() {
+  }
 
   ngOnInit(): void {
+  }
+
+  dismissBanner(): void {
+    this.displayBanner = false;
   }
 
 }
