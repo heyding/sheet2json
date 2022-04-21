@@ -25,12 +25,12 @@
       },
       "notification": {
         "success" : {
-          "title": "YES",
+          "headline": "YES",
           "message": "It worked"
         },
         "error": {
-          "title": "Oooops",
-          "message": "Something went wrong"
+          "headline": "JSON wurde generiert",
+          "message": "Du kannst nun deine Daten im JSON Format nutzen."
         }
       }
     }

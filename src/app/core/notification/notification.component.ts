@@ -18,33 +18,21 @@ export class NotificationComponent implements OnInit {
   notificationsSubscription: Subscription | undefined;
   routeSubscription: Subscription | undefined;
 
-  headline: string | undefined;
-  message: string | undefined;
-
-
   constructor(private router: Router, private notificationService: NotificationService) {
   }
 
   ngOnInit(): void {
-    // subscribe to new notification notifications
     this.notificationsSubscription = this.notificationService.onNotification(this.id)
       .subscribe(notification => {
-        this.headline = notification.headline;
-        this.message = notification.message;
         // clear notifications when an empty notification is received
-        if (!notification.message) {
+        if (!notification.type) {
           // filter out notifications without 'keepAfterRouteChange' flag
           this.notifications = this.notifications.filter(x => x.keepAfterRouteChange);
-
           // remove 'keepAfterRouteChange' flag on the rest
           this.notifications.forEach(x => delete x.keepAfterRouteChange);
           return;
         }
-
-        // add notification to array
         this.notifications.push(notification);
-
-        // auto close notification if required
         if (notification.autoClose) {
           setTimeout(() => this.removeNotification(notification), 7000);
         }
@@ -63,16 +51,13 @@ export class NotificationComponent implements OnInit {
     if (!this.notifications.includes(notification)) return;
 
     if (this.fade) {
-      // fade out notification
       // @ts-ignore
       this.notifications.find(x => x === notification).fade = true;
 
-      // remove notification after faded out
       setTimeout(() => {
         this.notifications = this.notifications.filter(x => x !== notification);
       }, 250);
     } else {
-      // remove notification
       this.notifications = this.notifications.filter(x => x !== notification);
     }
   }

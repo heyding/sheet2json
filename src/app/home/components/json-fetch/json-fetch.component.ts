@@ -14,11 +14,8 @@ export class JsonFetchComponent implements OnInit {
   loading: boolean = false;
   errorMessage: string | undefined;
 
-  notifyErrorHeadline: string = 'Ooops - could not fetch JSON data';
-  notifyErrorMessage: string = 'Please check the pasted URL and name of your sheet. And make sure that you set the visibility to public within Google Sheets.';
-
   options = {
-    // Notification is closed after 7 seconds
+    // notification is closed after 7 seconds
     autoClose: true,
     keepAfterRouteChange: false
   };
@@ -50,8 +47,7 @@ export class JsonFetchComponent implements OnInit {
         (error) => {
           this.errorMessage = error;
           this.loading = false;
-          // TODO Mit richtigen Nachrichten befüllen
-          this.notificationService.error(this.notifyErrorHeadline, this.notifyErrorMessage, this.options);
+          this.notificationService.error(this.options);
           throw error;
         }
       )

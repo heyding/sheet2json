@@ -16,7 +16,6 @@ export class JsonService {
     return this.http.get<any>(this.apiBaseUrl + '/' + sheetID + '/' + sheetName)
       .pipe(
         catchError((err) => {
-          console.error(err);
           return throwError(err);
         })
       )

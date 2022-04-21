@@ -13,27 +13,27 @@ export class NotificationService {
   constructor() {
   }
 
-  // enable subscribing to alerts observable
+  // enable subscribing to notifications observable
   onNotification(id = this.defaultId): Observable<Notification> {
     return this.subject.asObservable().pipe(filter(x => x && x.id === id));
   }
 
   // convenience methods
-  success(headline: string, message: string, options?: any) {
-    this.notify(new Notification({...options, type: NotificationType.Success, headline, message}));
+  success(options?: any) {
+    this.notify(new Notification({...options, type: NotificationType.Success}));
   }
 
-  error(headline: string, message: string, options?: any) {
-    this.notify(new Notification({...options, type: NotificationType.Error, headline, message}));
+  error(options?: any) {
+    this.notify(new Notification({...options, type: NotificationType.Error}));
   }
 
-  // main alert method
+  // main notification method
   notify(notification: Notification) {
     notification.id = notification.id || this.defaultId;
     this.subject.next(notification);
   }
 
-  // clear alerts
+  // clear notifications
   clear(id = this.defaultId) {
     this.subject.next(new Notification({id}));
   }

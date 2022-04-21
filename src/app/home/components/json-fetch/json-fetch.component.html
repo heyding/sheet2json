@@ -4,14 +4,14 @@
       <div class="pt-8 space-y-6 sm:pt-10 sm:space-y-5">
         <div class="space-y-6 sm:space-y-5">
           <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-            <label for="sheetURL" class="block text-lg font-medium text-gray-700 sm:mt-px sm:pt-2"> Sheet URL </label>
+            <label for="sheetURL" class="block text-lg font-medium text-gray-700 sm:mt-px sm:pt-2"> {{'home.json-fetch.url' | translate}} </label>
             <div class="mt-1 sm:mt-0 sm:col-span-2">
               <input [(ngModel)]="sheetURL" type="text" name="sheetURL" id="sheetURL"
                      class="block w-full shadow-sm focus:ring-gray-500 focus:border-gray-500 sm:text-sm border-gray-300 rounded-md">
             </div>
           </div>
           <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-            <label for="sheetName" class="block text-lg font-medium text-gray-700 sm:mt-px sm:pt-2"> Sheet name </label>
+            <label for="sheetName" class="block text-lg font-medium text-gray-700 sm:mt-px sm:pt-2"> {{'home.json-fetch.name' | translate}} </label>
             <div class="mt-1 sm:mt-0 sm:col-span-2">
               <input [(ngModel)]="sheetName" type="text" name="sheetName" id="sheetName"
                      class="max-w-lg block w-full shadow-sm focus:ring-gray-500 focus:border-gray-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
@@ -25,13 +25,13 @@
     <div class="inline-flex rounded-md shadow">
       <button (click)="getJSON(sheetURL!, sheetName!, 1)" type="button"
               class="inline-flex items-center justify-center px-3 py-2 border border-transparent text-center font-medium rounded-md text-gray-700 bg-gray-100 hover:bg-gray-200">
-        Preview JSON
+        {{'home.json-fetch.button.preview' | translate}}
       </button>
     </div>
     <div class="ml-3 inline-flex">
       <button (click)="getJSON(sheetURL!, sheetName!, 2)" type="button"
               class="inline-flex items-center justify-center px-3 py-2 border border-transparent text-center font-medium rounded-md text-white bg-gray-600 hover:bg-gray-800">
-        Download JSON
+        {{'home.json-fetch.button.download' | translate}}
       </button>
     </div>
   </div>

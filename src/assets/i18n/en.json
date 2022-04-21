@@ -25,12 +25,12 @@
       },
       "notification": {
         "success" : {
-          "title": "YES",
-          "message": "It worked"
+          "headline": "JSON data fetched",
+          "message": "You can now use your JSON data."
         },
         "error": {
-          "title": "Oooops",
-          "message": "Something went wrong"
+          "headline": "Ooops - could not fetch JSON data",
+          "message": "Please check the URL and name of your sheet. Make sure that you set the visibility to public within Google sheets."
         }
       }
     }
