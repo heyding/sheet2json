@@ -9,7 +9,7 @@ import {NotificationService} from '../../../shared/services/notification.service
 })
 export class JsonFetchComponent implements OnInit {
 
-  sheetID: string | undefined;
+  sheetURL: string | undefined;
   sheetName: string | undefined;
   loading: boolean = false;
   errorMessage: string | undefined;
@@ -18,6 +18,7 @@ export class JsonFetchComponent implements OnInit {
   notifyErrorMessage: string = 'Please check the pasted URL and name of your sheet. And make sure that you set the visibility to public within Google Sheets.';
 
   options = {
+    // Notification is closed after 7 seconds
     autoClose: true,
     keepAfterRouteChange: false
   };
@@ -27,8 +28,8 @@ export class JsonFetchComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.sheetID = '';
-    this.sheetName = '';
+    this.sheetURL = 'https://docs.google.com/spreadsheets/d/10anNpFLiMLvQpxPV7Y-eRcyhl4o4uYpJ8qUI3MEBg8M/edit#gid=0';
+    this.sheetName = 'fruits';
   }
 
   public getJSON(url: string, sheetName: string, option: number) {

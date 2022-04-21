@@ -1,43 +1,45 @@
-<div class="bg-white">
-  <div class="max-w-7xl mx-auto py-10 px-4 sm:py-24 sm:px-6 lg:px-8">
-    <div class="text-center">
-      <p class="mt-1 text-3xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-5xl">Turn your Google
-        Sheet data into valid JSON</p>
-    </div>
-  </div>
-</div>
-<app-prerequisite-list></app-prerequisite-list>
-<div class="bg-white pb-20">
-  <div class="max-w-4xl mx-auto sm:px-6 lg:px-8 pt-10 space-y-4 px-8">
-    <div>
-      <label for="sheetID" class="block text-lg font-medium text-gray-700">Sheet URL</label>
-      <div class="mt-1">
-        <input [(ngModel)]="sheetID" type="text" name="sheetID" id="sheetID"
-               class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
-               placeholder="">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <form class="space-y-8 divide-y divide-gray-200">
+    <div class="space-y-8 divide-y divide-gray-200 sm:space-y-5">
+
+      <div class="pt-8 space-y-6 sm:pt-10 sm:space-y-5">
+        <div>
+          <h3 class="text-lg leading-6 font-medium text-gray-900">SHEET2JSON</h3>
+          <p class="mt-1 max-w-2xl text-sm text-gray-500">Paste URL and name of your Google sheet to generate JSON.</p>
+        </div>
+        <div class="space-y-6 sm:space-y-5">
+          <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+            <label for="sheetURL" class="block text-lg font-medium text-gray-700 sm:mt-px sm:pt-2"> Sheet URL </label>
+            <div class="mt-1 sm:mt-0 sm:col-span-2">
+              <input [(ngModel)]="sheetURL" type="text" name="sheetURL" id="sheetURL"
+                     class="block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-md">
+            </div>
+          </div>
+          <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+            <label for="sheetName" class="block text-lg font-medium text-gray-700 sm:mt-px sm:pt-2"> Sheet name </label>
+            <div class="mt-1 sm:mt-0 sm:col-span-2">
+              <input [(ngModel)]="sheetName" type="text" name="sheetName" id="sheetName"
+                     class="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div>
-      <label for="sheetName" class="block text-lg font-medium text-gray-700">Sheet Name</label>
-      <div class="mt-1">
-        <input [(ngModel)]="sheetName" type="text" name="sheetName" id="sheetName"
-               class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
-               placeholder="">
-      </div>
-    </div>
-  </div>
-  <div class="mt-8 flex justify-center">
+  </form>
+  <div class="mt-8 flex justify-end">
     <div class="inline-flex rounded-md shadow">
-      <button (click)="getJSON(sheetID!, sheetName!, 1)" type="button"
-              class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200">
+      <button (click)="getJSON(sheetURL!, sheetName!, 1)" type="button"
+              class="inline-flex items-center justify-center px-3 py-2 border border-transparent text-center font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200">
         Preview JSON
       </button>
     </div>
     <div class="ml-3 inline-flex">
-      <button (click)="getJSON(sheetID!, sheetName!, 2)" type="button"
-              class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700">
+      <button (click)="getJSON(sheetURL!, sheetName!, 2)" type="button"
+              class="inline-flex items-center justify-center px-3 py-2 border border-transparent text-center font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-800">
         Download JSON
       </button>
     </div>
   </div>
 </div>
+
+
