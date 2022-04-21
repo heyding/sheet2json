@@ -4,7 +4,6 @@ import {CommonModule} from '@angular/common';
 import {HomeComponent} from './pages/home/home.component';
 import {TranslateModule} from '@ngx-translate/core';
 import {LanguageSwitchComponent} from './components/language-switch/language-switch.component';
-import {AboutComponent} from './pages/about/about.component';
 import {RouterModule} from '@angular/router';
 import {StoreModule} from '@ngrx/store';
 import {EffectsModule} from '@ngrx/effects';
@@ -21,7 +20,6 @@ import {JsonFetchComponent} from './components/json-fetch/json-fetch.component';
   declarations: [
     HomeComponent,
     LanguageSwitchComponent,
-    AboutComponent,
     PrerequisitesComponent,
     ApiReferenceComponent,
     JsonFetchComponent
