@@ -1,7 +1,7 @@
 {
   "header": {
     "title": "SHEET2JSON",
-    "text": "Paste the URL and name of your Google sheet to generate JSON."
+    "text": "Paste the URL and name of your Google Sheets sheet to generate JSON."
   },
   "footer": {
     "page": {
