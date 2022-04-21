@@ -43,6 +43,7 @@ export class JsonFetchComponent implements OnInit {
           } else if (option === 2) {
             this.downloadJSONasFile(response, sheetName.concat('.json'))
           }
+          this.notificationService.success(this.options);
         },
         (error) => {
           this.errorMessage = error;
